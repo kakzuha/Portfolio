@@ -2,12 +2,9 @@ import { useEffect, useRef, useState } from 'react'
 import './App.css'
 
 const PROJECTS = [
-  { emoji: '🚀', title: 'Project Alpha',  desc: 'Full-stack app for real-time data visualization with interactive dashboards and live analytics.', tags: ['React', 'Node.js', 'WebSocket'], color: 'var(--accent)' },
-  { emoji: '🤖', title: 'AI Assistant',   desc: 'Intelligent chatbot powered by NLP that helps users manage daily tasks efficiently.', tags: ['Python', 'NLP', 'FastAPI'], color: '#06b6d4' },
-  { emoji: '📊', title: 'Data Pipeline',  desc: 'Automated ETL pipeline that processes large datasets for downstream ML workloads.', tags: ['Python', 'Pandas', 'SQL'], color: '#10b981' },
-  { emoji: '🎨', title: 'Design System',  desc: 'Comprehensive component library built for consistency across multiple products.', tags: ['React', 'CSS', 'Storybook'], color: '#f59e0b' },
-  { emoji: '🔐', title: 'Auth Service',   desc: 'Secure microservice supporting OAuth 2.0, JWT, and multi-factor authentication flows.', tags: ['Node.js', 'JWT', 'OAuth'], color: '#ef4444' },
-  { emoji: '🌐', title: 'Portfolio Site', desc: 'This very portfolio — built with React and Vite for performance and visual impact.', tags: ['React', 'Vite', 'CSS'], color: 'var(--accent)' },
+  { emoji: '⛑️', title: 'Kaves',  desc: 'A smart HSE web app to help HSE staffs on HSE documentation such as JSA, incident reports, and mapping. This web also provide a smart dashboard to analyze which place should be handled first based on risk assesment.', tags: ['React', 'Node.js', 'MongoDB'], color: 'var(--accent)' },
+  { emoji: '🚪', title: 'MyLab',   desc: 'Room information display using Raspberry Pi. Also feature face recognition for easier lecturer recognition in room.', tags: ['Python', 'Raspberry Pi', 'MySQL'], color: '#06b6d4' },
+  { emoji: '🕒', title: 'TeMan',  desc: 'Simple time management web app.', tags: ['HTML', 'CSS', 'MySQL'], color: '#10b981' },
 ]
 
 // ─── Carousel constants ───────────────────────────────────────────────
@@ -193,9 +190,6 @@ function App() {
       <section className="section hero-section" id="center">
         <div className="hero-content">
           <h1 className="title1">Portfolio</h1>
-          <p className="hero-sub">
-            Researcher · Developer · Builder
-          </p>
         </div>
       </section>
 
@@ -204,46 +198,18 @@ function App() {
           <span className="section-tag">01 — About Me</span>
           <h2 className="section-title">Who I Am</h2>
           <div className="about-grid">
-            {/* ── LEFT: Profile Photo ── */}
-            <div className="about-photo-col">
-              <div className="about-photo-frame">
-                <div className="about-photo-inner">
-                  <svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg" className="about-photo-svg">
-                    {/* Body / torso */}
-                    <ellipse cx="60" cy="118" rx="42" ry="26" fill="var(--accent)" opacity="0.18"/>
-                    <ellipse cx="60" cy="108" rx="30" ry="20" fill="var(--accent)" opacity="0.28"/>
-                    {/* Neck */}
-                    <rect x="53" y="72" width="14" height="16" rx="7" fill="var(--accent)" opacity="0.55"/>
-                    {/* Head */}
-                    <circle cx="60" cy="58" r="26" fill="var(--accent)" opacity="0.7"/>
-                    {/* Eyes */}
-                    <circle cx="52" cy="55" r="3.5" fill="var(--bg)" opacity="0.9"/>
-                    <circle cx="68" cy="55" r="3.5" fill="var(--bg)" opacity="0.9"/>
-                    <circle cx="53" cy="55.5" r="1.8" fill="var(--text-h)" opacity="0.8"/>
-                    <circle cx="69" cy="55.5" r="1.8" fill="var(--text-h)" opacity="0.8"/>
-                    {/* Smile */}
-                    <path d="M52 67 Q60 74 68 67" stroke="var(--bg)" strokeWidth="2.2" strokeLinecap="round" fill="none" opacity="0.85"/>
-                    {/* Hair */}
-                    <path d="M34 54 Q36 28 60 26 Q84 28 86 54 Q84 36 60 34 Q36 36 34 54Z" fill="var(--text-h)" opacity="0.55"/>
-                  </svg>
-                </div>
-                <div className="about-photo-glow" />
-              </div>
-              <div className="about-badges">
-                <span className="badge">🎓 Student</span>
-                <span className="badge">💡 Researcher</span>
-                <span className="badge">⚡ Developer</span>
-              </div>
+            {/* LEFT: Profile Photo */}
+            <div className="about-photo-col">         
+                  {/* ntar di sini naro pp */}    
             </div>
 
-            {/* ── RIGHT: Bio / About Me ── */}
+            {/* RIGHT: Description */}
             <div className="about-text">
               <p className="about-lead">
-                Hi! I'm a passionate developer and researcher dedicated to building
-                meaningful technology that makes a difference.
+                Hi! I'm Kavita, a sixth-year college student at Politeknik Negeri Batam!
               </p>
               <p className="about-body">
-                With a strong foundation in software development and a deep curiosity
+                With a foundation in software development and a deep curiosity
                 for cutting-edge research, I enjoy bridging the gap between theory and
                 practice. Whether it's crafting elegant user interfaces, designing
                 efficient algorithms, or exploring the frontiers of AI — I love every
@@ -254,7 +220,7 @@ function App() {
                 continuously learning something new every day.
               </p>
               <div className="about-skills">
-                {['React', 'Python', 'Machine Learning', 'Node.js', 'Data Analysis', 'UI/UX'].map(skill => (
+                {['ReactJS', 'Python', 'Data Analysis', 'UI/UX', 'Excel', 'Figma'].map(skill => (
                   <span key={skill} className="skill-chip">{skill}</span>
                 ))}
               </div>
@@ -275,28 +241,12 @@ function App() {
           <div className="research-list">
             {[
               {
-                icon: '🧠',
+                icon: '🖼️',
                 status: 'Active',
                 statusColor: '#10b981',
-                title: 'Large Language Models for Domain-Specific Tasks',
-                desc: 'Investigating fine-tuning strategies and prompt engineering techniques to adapt general-purpose LLMs for specialized scientific and educational domains with limited labeled data.',
-                highlights: ['Fine-tuning', 'Few-shot Learning', 'Evaluation Benchmarks'],
-              },
-              {
-                icon: '📡',
-                status: 'Active',
-                statusColor: '#10b981',
-                title: 'Federated Learning with Privacy Guarantees',
-                desc: 'Exploring privacy-preserving machine learning approaches where training data never leaves local devices, enabling collaborative model training without centralizing sensitive information.',
-                highlights: ['Differential Privacy', 'Federated Aggregation', 'Edge Computing'],
-              },
-              {
-                icon: '🔬',
-                status: 'Ongoing',
-                statusColor: '#f59e0b',
-                title: 'Human-Computer Interaction in AI-Assisted Workflows',
-                desc: 'Studying how humans cognitively adapt to AI-augmented environments and what design patterns best support trust, transparency, and effective collaboration between humans and AI systems.',
-                highlights: ['UX Research', 'Cognitive Load', 'Trust Calibration'],
+                title: 'To What Extent Can User-Centered Design Improve the Usability of KAVES? A Case in Smart HSE Application.',
+                desc: 'This study applies User-Centered Design (UCD) across four iterative phases to redesign the KAVES interface and enhance its usability for HSE officers. Usability is evaluated using the System Usability Scale (SUS) before and after the redesign to improve efficiency, intuitiveness, and user satisfaction in high-risk work environments.',
+                highlights: ['UI/UX', 'User Centered Design'],
               },
             ].map((item) => (
               <div key={item.title} className="research-card">

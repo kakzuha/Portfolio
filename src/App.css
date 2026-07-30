@@ -1,6 +1,6 @@
 html, body {
   overscroll-behavior-y: none;
-  background-color: rgba(100, 81, 10, 0.907);
+  background-color: var(--bg);
 }
 
 .section {
@@ -65,12 +65,27 @@ html, body {
   font-weight: 600;
 }
 
+@keyframes titleReveal {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.95);
+    filter: blur(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
+}
+
 .title1 {
   font-family: 'Sacramento', cursive;
   font-size: 132px;
   letter-spacing: 4px;
   color: var(--text-h);
   line-height: 1;
+  opacity: 0;
+  animation: titleReveal 1.2s cubic-bezier(0.25, 1, 0.5, 1) 0.2s forwards;
 }
 
 .hero-sub {
@@ -118,9 +133,6 @@ html, body {
 }
 
 /* ── ABOUT Section ───────────────────────────────────────── */
-.about-section {
-  background: var(--bg);
-}
 
 .about-grid {
   display: grid;
@@ -248,7 +260,6 @@ html, body {
 
 /* ── PROJECTS Section ──────────────────────── */
 .projects-section {
-  background: var(--code-bg);
   overflow-x: hidden;   /* clip track horizontally, preserve vertical shadows */
   padding: 80px 0;
   align-items: center;

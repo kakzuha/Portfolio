@@ -1,7 +1,7 @@
 :root {
-  --text: #fdfff7;
+  --text: #eedd8a;
   --text-h: #08060d;
-  --bg: #fff;
+  --bg: #eedd8a;
   --border: #e5e4e7;
   --code-bg: #f4f3ec;
   --accent: #ceff3bc8;
@@ -32,9 +32,9 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --text: #fffdf4;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
+    --text: #eedd8a;
+    --text-h: #eedd8a;
+    --bg: #210124;
     --border: #2e303a;
     --code-bg: #1f2028;
     --accent: #c084fc;
