@@ -196,7 +196,7 @@ function App() {
       <section className="section about-section" id="about">
         <div className="section-inner">
           <span className="section-tag">01 — About Me</span>
-          <h2 className="section-title">Who I Am</h2>
+          <h2 className="section-title">Who am miaw</h2>
           <div className="about-grid">
             {/* LEFT: Profile Photo */}
             <div className="about-photo-col">         
